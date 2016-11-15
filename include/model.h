@@ -40,7 +40,12 @@ public:
 	void PrintHelp(){
 		cout<<"type 'quit' to exit program"<<endl;
 		cout<<"type 'books' to see available books"<<endl;
-		cout<<"tpe 'users' to see the list of users"<<endl;
+		cout<<"type 'users' to see the list of users"<<endl;
+		cout<<"type 'login' to login as a new user"<<endl;
+		cout<<"type 'return' \n 'title' to return a book"<<endl;
+		cout<<"type 'get' to get a book"<<endl;
+		cout<<"type 'print_debts' to get a list of debtors"<<endl;
+		cout<<"type 'help' to print this message"<<endl;
 	}
 	void PrintError(){
 		cout<<"Error"<<endl;
@@ -134,4 +139,5 @@ public:
 	void GiveBooks(string);
 	void ReturnBooks(string, string );
 	void PrintDebtors();
+	void AddUser(string);
 };

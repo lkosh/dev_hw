@@ -195,3 +195,9 @@ void Model::PrintDebtors(){
 		}
 	}
 }
+
+
+void Model::AddUser(string name){
+	Users u(name);
+		users.push_back(u);
+}

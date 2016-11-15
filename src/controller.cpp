@@ -20,12 +20,16 @@ using std::tuple;
 using std::vector;
 
 void Controller::operate(void){
+	(*model)._str = "Please enter your name";
+	(*model)._Notify();
 	string name  = (*view).GetInput();
 	(*model).InitBooks();
 	(*model).InitUsers(name);
 	(*view).PrintHelp();
 	string mes;
+	
 	mes = (*view).GetInput();
+	
 	while ( mes != "quit"){
 		if (mes == "help")
 			(*view).PrintHelp();
@@ -42,6 +46,10 @@ void Controller::operate(void){
 		}
 		else if (mes == "print_debts")
 			(*model).PrintDebtors();
+		else if (mes == "login"){
+			name = (* view).GetInput();
+			(*model).AddUser(name);
+		}
 		else 
 			(*view).PrintError();
 		mes = (*view).GetInput();
