@@ -97,6 +97,59 @@ public:
 	Books(){};
 };
 
+class IBookSource{
+	public:
+	list <Books> books; 
+	IBookSource() ;
+};
+
+class BookSource1 {
+	list <Books> books;
+	public:
+	
+	BookSource1(){
+		Books b1("C1B1");
+		books.push_back(b1);
+		Books b2("C1B2");
+		books.push_back(b2);
+	}
+	list <Books> ListOfBooks(){
+		
+		return books;
+	}
+};
+class BookSource2 {
+	list <Books> books;
+	public:
+	
+	BookSource2(){
+		Books b1("C2B1");
+		books.push_back(b1);
+		Books b2("C2B2");
+		books.push_back(b2);
+	}
+	list <Books> ListOfBooks(){
+		
+		return books;
+	}
+};
+
+class BookSource3 {
+	list <Books> books;
+	public:
+	
+	BookSource3(){
+		Books b1("C3B1");
+		books.push_back(b1);
+		Books b2("C3B2");
+		books.push_back(b2);
+	}
+	list <Books> ListOfBooks(){
+		
+		return books;
+	}
+};
+
 class Model{
 	
     list <IObserver*> _observers;
@@ -132,7 +185,7 @@ public:
     void remove(IObserver& ref);
 	void add(IObserver& ref);
 	void reset(string str);
-	void InitBooks();
+	void InitBooks(string );
 	void InitUsers(string);
 	void _Notify(void);
 	const string& get_str();
