@@ -23,7 +23,11 @@ void Controller::operate(void){
 	(*model)._str = "Please enter your name";
 	(*model)._Notify();
 	string name  = (*view).GetInput();
-	(*model).InitBooks();
+	(*model)._str = "Please choose type of source - 1,2 or 3";
+	(*model)._Notify();
+	string type = (*view).GetInput();
+	
+	(*model).InitBooks(type);
 	(*model).InitUsers(name);
 	(*view).PrintHelp();
 	string mes;

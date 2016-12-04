@@ -80,11 +80,25 @@ void Model::PrintBooks(){
 	}
 }
 
-void Model::InitBooks(){
-	Books b("Book1");
-	books.push_back(b);
-	Books a("Book2");
-	books.push_back(a);
+void Model::InitBooks(string type){
+	if (type == "1"){
+		BookSource1 b;
+		books = b.ListOfBooks();
+	}
+	else 
+	if (type == "2"){
+		BookSource2 b;
+		books = b.ListOfBooks();
+	}
+	else
+	if (type =="3"){
+		BookSource3 b;
+		books = b.ListOfBooks();
+	}
+	//Books b("Book1");
+	//books.push_back(b);
+	//Books a("Book2");
+	//books.push_back(a);
 	
 }
 
